@@ -1,11 +1,11 @@
+let luz = 0
 basic.showIcon(IconNames.Heart)
 basic.forever(function () {
+    luz = input.lightLevel()
+    basic.showNumber(input.lightLevel())
     if (input.lightLevel() > 75) {
         basic.showIcon(IconNames.Yes)
-        music.playMelody("C5 - G E A E - E ", 120)
-        basic.showString("Si")
     } else {
         basic.showIcon(IconNames.No)
-        basic.showString("No")
     }
 })
